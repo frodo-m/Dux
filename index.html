@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dux</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* header */
+      #nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 16px;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+
+      #header-left {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      #header-right * {
+        margin: 0;
+      }
+
+      ul {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #logo {
+        flex-shrink: 0;
+        max-width: 50px;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #222831;
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+
+      /* hero */
+      #hero {
+        display: flex;
+        max-width: 100%;
+        align-items: stretch;
+        justify-content: space-between;
+      }
+
+      #hero-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #hero-title {
+        background-color: rgba(75, 56, 184, 0.089);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      #hero-title h1 {
+        font-size: 4rem;
+        margin: 0 0 10px;
+        padding: 0;
+      }
+
+      #hero-title p {
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+      }
+
+      #hero-image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      #hero-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      #hero-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: 600;
+        border-radius: 3px;
+        align-self: start;
+      }
+
+      /* solutions section */
+      .solutions-img img {
+        width: 50px;
+      }
+
+      /* quote section */
+
+      /* footer */
+    </style>
+  </head>
+  <body>
+    <header id="nav-bar">
+      <div id="header-left">
+        <img src="./imgs/logo.png" alt="dux logo" id="logo" />
+        <h1 id="title">Dux Inn.</h1>
+      </div>
+      <div id="header-right">
+        <nav class="nav header">
+          <ul>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div id="hero-content">
+          <div id="hero-title">
+            <h1>Dux Business Solution</h1>
+            <p id="hero-par">
+              We have a deep understanding of the unique needs and challenges
+              faced by these companies and are committed to helping them
+              succeed. Dux Software offers a flexible and cost-effective
+              approach to provide custom software solutions without breaking the
+              bank. Their team of experts can help businesses take their
+              operations to the next level with reliable and affordable software
+              development services
+            </p>
+            <button id="hero-btn" value="Sign up">Sign up</button>
+          </div>
+        </div>
+        <div id="hero-image">
+          <img src="./imgs/hero.jpg" alt="" />
+        </div>
+      </section>
+
+      <section id="solutions">
+        <h2 id="solutions-title">Solutions</h2>
+        <figure class="solutions-img">
+          <img src="./imgs/vision.jpg" alt="vision image" class="sol-img" />
+          <figcaption>Envisioning the Future of Your Business</figcaption>
+        </figure>
+        <figure class="solutions-img">
+          <img src="./imgs/idea.jpg" alt="idea image" class="sol-img" />
+          <figcaption>
+            Innovative ideas that transform challenges into opportunities for
+            growth and success
+          </figcaption>
+        </figure>
+        <figure class="solutions-img">
+          <img src="./imgs/chess.jpg" alt="chess image" class="sol-img" />
+          <figcaption>
+            Empowering your business with effective solutions to overcome
+            challenges and achieve success
+          </figcaption>
+        </figure>
+        <figure class="solutions-img">
+          <img
+            src="./imgs/collaborate.jpg"
+            alt="collaboration image"
+            class="sol-img"
+          />
+          <figcaption>
+            Together, we create innovative solutions that drive success through
+            collaboration
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="quote">
+        <blockquote>
+          The best way to predict the future is to invent it.
+          <cite>Alan Kay</cite>
+        </blockquote>
+      </section>
+
+      <section id="contact-us">
+        <h3>Call us now! It's time!</h3>
+        <p>Sign up for our product by clicking that button right over there!</p>
+        <button id="contact-us-btn"></button>
+      </section>
+    </main>
+    <footer>
+      <p id="footer-par">Copyright &copy; Dux Innovations 2024</p>
+    </footer>
+  </body>
+</html>
