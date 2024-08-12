@@ -5,216 +5,323 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dux</title>
     <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
       body {
-        height: 100vh;
         width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 0;
         box-sizing: border-box;
       }
 
       /* header */
       #nav-bar {
+        width: 100%;
+        height: 10vh;
+        margin: 0;
+        padding: 0px 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 16px;
-        margin: 0;
+        border-bottom: 1px solid #00000062;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       }
 
-      #header-left {
-        display: flex;
-        gap: 10px;
-        align-items: center;
+      #nav-bar a img {
+        width: auto;
+        height: 60px;
         flex-shrink: 0;
       }
 
-      #header-right * {
+      #nav-bar > a {
         margin: 0;
-      }
-
-      ul {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      #logo {
-        flex-shrink: 0;
-        max-width: 50px;
-        margin: 0;
-        padding: 0;
-      }
-
-      a {
         text-decoration: none;
-        color: #222831;
+        color: black;
+        display: flex;
+        gap: 16px;
+      }
+
+      #nav-bar ul {
+        list-style-type: none;
+        display: flex;
+      }
+
+      #nav-bar ul a {
+        margin: 0;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: black;
         font-size: 1.2rem;
-        padding: 10px;
+      }
+
+      #nav-bar ul a:hover {
+        background-color: #337bce;
+        border-radius: 5px;
+        color: white;
       }
 
       /* hero */
       #hero {
-        display: flex;
-        max-width: 100%;
-        align-items: stretch;
-        justify-content: space-between;
-      }
-
-      #hero-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      #hero-title {
-        background-color: rgba(75, 56, 184, 0.089);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-      }
-
-      #hero-title h1 {
-        font-size: 4rem;
-        margin: 0 0 10px;
-        padding: 0;
-      }
-
-      #hero-title p {
-        font-size: 1.2rem;
-        padding: 0;
-        margin: 0;
-        flex-grow: 1;
-      }
-
-      #hero-image {
-        flex: 1;
-        display: flex;
-        align-items: center;
-      }
-
-      #hero-image img {
         width: 100%;
         height: auto;
+        margin: 0;
+        padding: 30px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
       }
 
-      #hero-btn {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+      #hero h1 {
+        font-size: 56px;
+        padding: 0;
+        margin: 0;
+        flex: 1 0 auto;
+        line-height: 1;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      #hero #dux {
+        color: #337bce;
+        font-size: 62px;
+      }
+
+      #hero p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        flex: 1 0 auto;
+      }
+
+      #hero button {
+        padding: 8px 16px;
         border: none;
-        background-color: #000000;
-        color: #ffffff;
+        background-color: #337bce;
+        color: white;
         font-weight: 600;
+        font-size: 1.5rem;
         border-radius: 3px;
-        align-self: start;
       }
 
       /* solutions section */
-      .solutions-img img {
-        width: 50px;
+      main {
+        margin: 0;
+        padding: 0;
+      }
+      
+      h2 {
+        padding: 0 90px;
+        font-size: 2.5rem;
+        line-height: 0;
+      }
+      h2 span {
+          margin: 0;
+          padding: 0;
+        color: rgb(248, 177, 85);
+        font-size: 3rem;
+      }
+      
+      #solutions {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        /* background-color: #fdecc827; */
+      }
+
+      #solutions figure {
+        width: 220px;
+        height: 350px;
+        /* padding: px 10px; */
+        margin: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+        align-items: center;
+        border: 2px solid rgb(248, 177, 85);
+        border-radius: 5px;
+        box-sizing: content-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+      }
+
+      #solutions figure:hover {
+        cursor: pointer;
+      }
+      
+      #solutions img {
+        width: 220px;
+        height: 200px;
       }
 
       /* quote section */
+      #quote {
+        margin: 0;
+        padding: 0 100px;
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        line-height: 1.3;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: rgba(220, 220, 220, 0.267);
+      }
 
+      #quote p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: right;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 0;
+    }
+
+      /* contact us section */
+      #contact-us {
+        margin: 30px 100px;
+        padding: 20px 50px;
+        background-color: #337bce;
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #contact-us h3 {
+        margin: 0;
+        padding: 0;
+      }
+
+      #contact-us p {
+        margin: 0;
+        padding: 0;
+      }
+
+      #contact-us button {
+        margin: 0;
+        padding: 8px 16px;
+        border: 1px solid white;
+        background-color: #337bce;
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 3px;
+        align-self: ;
+      }
+      
       /* footer */
+      footer {
+        margin: 0;
+        padding: 1px 0px;
+        background-color: #091c31;
+        color: white;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <header id="nav-bar">
-      <div id="header-left">
-        <img src="./imgs/logo.png" alt="dux logo" id="logo" />
-        <h1 id="title">Dux Inn.</h1>
-      </div>
-      <div id="header-right">
-        <nav class="nav header">
+    <div id="body">
+      <header id="nav-bar">
+        <a href="#">
+          <img src="./imgs/logo.png" alt="dux logo" />
+        </a>
+        <nav>
           <ul>
             <li><a href="#">Solutions</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Contact us</a></li>
           </ul>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <main>
-      <section id="hero">
-        <div id="hero-content">
-          <div id="hero-title">
-            <h1>Dux Business Solution</h1>
-            <p id="hero-par">
-              We have a deep understanding of the unique needs and challenges
-              faced by these companies and are committed to helping them
-              succeed. Dux Software offers a flexible and cost-effective
-              approach to provide custom software solutions without breaking the
-              bank. Their team of experts can help businesses take their
-              operations to the next level with reliable and affordable software
-              development services
-            </p>
-            <button id="hero-btn" value="Sign up">Sign up</button>
-          </div>
+      <main>
+        <section id="hero">
+          <h1>
+            <span id="dux">Dux</span> <br />
+            Business Solution
+          </h1>
+          <p>
+            We have a deep understanding of the unique needs and challenges
+            faced by these companies and are committed to helping them succeed.
+            Dux Software offers a flexible and cost-effective approach to
+            provide custom software solutions without breaking the bank. Their
+            team of experts can help businesses take their operations to the
+            next level with reliable and affordable software development
+            services
+          </p>
+          <button id="hero-btn" value="Sign up">Sign up</button>
+        </section>
+
+        <h2 id="solutions-title"><span>|</span>Solutions</h2>
+        <section id="solutions">
+          <figure class="solutions-img">
+            <img src="./imgs/grow.jpg" alt="vision image" class="sol-img" />
+            <figcaption>Envisioning the Future of Your Business</figcaption>
+          </figure>
+          <figure class="solutions-img">
+            <img src="./imgs/idea.jpg" alt="idea image" class="sol-img" />
+            <figcaption>
+              Innovative ideas that transform challenges into opportunities for
+              growth and success
+            </figcaption>
+          </figure>
+          <figure class="solutions-img">
+            <img src="./imgs/chess.jpeg" alt="chess image" class="sol-img" />
+            <figcaption>
+              Empowering your business with effective solutions to overcome
+              challenges and achieve success
+            </figcaption>
+          </figure>
+          <figure class="solutions-img">
+            <img
+              src="./imgs/collaborate.jpg"
+              alt="collaboration image"
+              class="sol-img"
+            />
+            <figcaption>
+              Together, we create innovative solutions that drive success
+              through collaboration
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="quote">
+          <blockquote>
+            The best way to predict the future is to invent it.
+            <p id="alan-kay">- Alan Kay</p>
+          </blockquote>
+        </section>
+
+        <section id="contact-us">
+            <div>
+          <h3>Call us now! It's time!</h3>
+          <p>
+            Sign up for our product by clicking that button right over there!
+          </p>
         </div>
-        <div id="hero-image">
-          <img src="./imgs/hero.jpg" alt="" />
-        </div>
-      </section>
-
-      <section id="solutions">
-        <h2 id="solutions-title">Solutions</h2>
-        <figure class="solutions-img">
-          <img src="./imgs/vision.jpg" alt="vision image" class="sol-img" />
-          <figcaption>Envisioning the Future of Your Business</figcaption>
-        </figure>
-        <figure class="solutions-img">
-          <img src="./imgs/idea.jpg" alt="idea image" class="sol-img" />
-          <figcaption>
-            Innovative ideas that transform challenges into opportunities for
-            growth and success
-          </figcaption>
-        </figure>
-        <figure class="solutions-img">
-          <img src="./imgs/chess.jpg" alt="chess image" class="sol-img" />
-          <figcaption>
-            Empowering your business with effective solutions to overcome
-            challenges and achieve success
-          </figcaption>
-        </figure>
-        <figure class="solutions-img">
-          <img
-            src="./imgs/collaborate.jpg"
-            alt="collaboration image"
-            class="sol-img"
-          />
-          <figcaption>
-            Together, we create innovative solutions that drive success through
-            collaboration
-          </figcaption>
-        </figure>
-      </section>
-
-      <section id="quote">
-        <blockquote>
-          The best way to predict the future is to invent it.
-          <cite>Alan Kay</cite>
-        </blockquote>
-      </section>
-
-      <section id="contact-us">
-        <h3>Call us now! It's time!</h3>
-        <p>Sign up for our product by clicking that button right over there!</p>
-        <button id="contact-us-btn"></button>
-      </section>
-    </main>
-    <footer>
-      <p id="footer-par">Copyright &copy; Dux Innovations 2024</p>
-    </footer>
+          <button id="contact-us-btn">Contact us</button>
+        </section>
+      </main>
+      <footer>
+        <p>Copyright &copy; Dux Innovations 2024</p>
+      </footer>
+    </div>
   </body>
 </html>
