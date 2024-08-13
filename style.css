@@ -21,9 +21,9 @@
       /* header */
       #nav-bar {
         width: 100%;
-        height: 10vh;
+        height: 7vh;
         margin: 0;
-        padding: 0px 100px;
+        padding: 0px 250px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -56,7 +56,7 @@
         padding: 8px 12px;
         text-decoration: none;
         color: black;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       #nav-bar ul a:hover {
@@ -70,7 +70,7 @@
         width: 100%;
         height: auto;
         margin: 0;
-        padding: 30px 100px;
+        padding: 30px 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -112,11 +112,11 @@
       /* solutions section */
       main {
         margin: 0;
-        padding: 0 100px;
+        /* padding: 0 100px; */
       }
 
       h2 {
-        padding: 0 90px;
+        padding: 0 290px;
         font-size: 2.5rem;
         line-height: 0;
       }
@@ -131,7 +131,7 @@
         width: 100%;
         height: auto;
         margin: 0;
-        padding: 30px 100px;
+        padding: 30px 300px;
         display: flex;
         justify-content: space-around;
         align-items: start;
@@ -168,8 +168,7 @@
 
       /* quote section */
       #quote {
-        margin: 0;
-        padding: 0 100px;
+        margin: 20px 0;
         display: flex;
         justify-content: center;
         font-size: 2rem;
