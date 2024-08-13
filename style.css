@@ -142,7 +142,7 @@
       }
 
       #bg {
-        background: linear-gradient(360deg, rgb(241, 247, 252), rgb(202, 228, 255));
+        background: linear-gradient(360deg, rgb(241, 247, 252) 65%, rgb(205, 228, 253));
       }
       
 
