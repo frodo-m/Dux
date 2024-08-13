@@ -24,7 +24,7 @@
         width: 100%;
         height: 7vh;
         margin: 0;
-        padding: 0px 250px;
+        padding: 0px 400px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -71,7 +71,7 @@
         width: 100%;
         height: auto;
         margin: 0;
-        padding: 30px 300px;
+        padding: 30px 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -79,18 +79,18 @@
       }
 
       #hero h1 {
-        font-size: 56px;
+        font-size: 80px;
         padding: 0;
         margin: 0;
         flex: 1 0 auto;
-        line-height: 1;
+        line-height: .9;
         font-family: "Times New Roman", Times, serif;
         color: #092646;
       }
 
       #hero #dux {
         color: #337bce;
-        font-size: 62px;
+        font-size: 100px;
       }
 
       #hero p {
@@ -110,6 +110,16 @@
         font-weight: 600;
         font-size: 1.5rem;
         border-radius: 3px;
+        font-family: 'Lucida Sans Regular';
+      }
+
+      #hero button:hover {
+        cursor: pointer;
+        background-color: rgb(48, 98, 155);
+      }
+
+      #hero button:active {
+        background-color: rgb(34, 73, 121);
       }
 
       /* solutions section */
@@ -119,7 +129,7 @@
       }
 
       h2 {
-        padding: 0 290px;
+        padding: 0 390px;
         font-size: 2.5rem;
         line-height: 0;
         color: #092646;
@@ -135,7 +145,7 @@
         width: 100%;
         height: auto;
         margin: 0;
-        padding: 30px 300px;
+        padding: 30px 400px;
         display: flex;
         justify-content: space-around;
         align-items: start;
@@ -164,11 +174,7 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #092646;
     }
-    
-    #solutions figure:hover {
-        cursor: pointer;
-    }
-    
+
     #solutions img {
         width: 100%;
         height: 250px;
@@ -198,7 +204,7 @@
 
       /* contact us section */
       #contact-us {
-        margin: 30px 300px;
+        margin: 30px 400px;
         padding: 20px 150px;
         background-color: #337bce;
         border-radius: 8px;
@@ -221,16 +227,22 @@
       #contact-us button {
         margin: 0;
         padding: 8px 16px;
-        border: 1px solid white;
+        border: 1px solid rgb(178, 223, 253);
         background-color: #337bce;
         color: white;
         font-weight: 600;
         font-size: 1rem;
         border-radius: 3px;
+        font-family: 'Lucida Sans Regular';
       }
 
       #contact-us button:hover {
-        border: 1px solid #337bce;
+        border: 1px solid #ffffff;
+        cursor: pointer;
+      }
+
+      #contact-us button:active {
+        background-color: #2760a1;
       }
 
       /* footer */
