@@ -153,8 +153,12 @@
         border: 2px solid rgb(248, 177, 85);
         border-radius: 5px;
         box-sizing: content-box;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 18px;
+    }
+
+    #solutions figcaption {
+        font-size: 1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     
     #solutions figure:hover {
@@ -190,7 +194,7 @@
 
       /* contact us section */
       #contact-us {
-        margin: 30px 150px;
+        margin: 30px 300px;
         padding: 20px 150px;
         background-color: #337bce;
         border-radius: 8px;
@@ -219,6 +223,10 @@
         font-weight: 600;
         font-size: 1rem;
         border-radius: 3px;
+      }
+
+      #contact-us button:hover {
+        border: 1px solid #337bce;
       }
 
       /* footer */
