@@ -16,6 +16,7 @@
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
+        background-color: aliceblue;
       }
 
       /* header */
@@ -27,7 +28,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #00000062;
+        border-bottom: 1px solid #092646;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       }
@@ -98,6 +99,7 @@
         line-height: 1.5;
         flex: 1 0 auto;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #092646;
       }
 
       #hero button {
@@ -120,6 +122,7 @@
         padding: 0 290px;
         font-size: 2.5rem;
         line-height: 0;
+        color: #092646;
       }
       h2 span {
         margin: 0;
@@ -159,6 +162,7 @@
     #solutions figcaption {
         font-size: 1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #092646;
     }
     
     #solutions figure:hover {
@@ -180,7 +184,7 @@
         line-height: 1.3;
         font-style: italic;
         font-family: "Times New Roman", Times, serif;
-        background-color: rgba(220, 220, 220, 0.267);
+        background-color: rgba(190, 190, 188, 0.247);
       }
 
       #quote p {
