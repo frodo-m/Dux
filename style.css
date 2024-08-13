@@ -73,7 +73,7 @@
       #hero {
         width: 100%;
         height: auto;
-        margin: 0;
+        margin: 40px 0 0;
         padding: 30px 400px;
         display: flex;
         flex-direction: column;
@@ -81,8 +81,24 @@
         align-items: start;
       }
 
+      #hero #text-img {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #hero #text {
+        max-width: 50%;
+      }
+
+      #hero img {
+        max-width: 45%;
+        height: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
       #hero h1 {
-        font-size: 80px;
+        font-size: 4.2rem;
         padding: 0;
         margin: 0;
         flex: 1 0 auto;
@@ -93,7 +109,7 @@
 
       #hero #dux {
         color: #337bce;
-        font-size: 100px;
+        font-size: 5rem;
       }
 
       #hero p {
@@ -108,8 +124,7 @@
       #hero button {
         padding: 12px 24px;
         border: none;
-        background-color: #337bce;
-        border: 3px solid rgb(248, 177, 85);
+        background-color: rgb(248, 177, 85);
         color: rgb(255, 255, 255);
         font-weight: 600;
         font-size: 2rem;
@@ -119,8 +134,7 @@
 
       #hero button:hover {
         cursor: pointer;
-        background-color: rgb(248, 177, 85);
-        border: 3px solid #337bce;
+        background-color: rgb(223, 138, 27);
       }
 
       #hero button:active {
