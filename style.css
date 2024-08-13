@@ -141,6 +141,9 @@
         background-color: rgb(34, 73, 121);
       }
 
+      #bg {
+        background: linear-gradient(360deg, rgb(241, 247, 252), rgb(202, 228, 255));
+      }
       
 
       /* solutions section */
