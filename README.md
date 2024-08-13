@@ -1,2 +1,2 @@
 # Dux
-My first website for my first company 😄
+My first landing page
