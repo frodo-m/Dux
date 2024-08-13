@@ -106,13 +106,13 @@
       }
 
       #hero button {
-        padding: 8px 16px;
+        padding: 12px 24px;
         border: none;
         background-color: #337bce;
         border: 3px solid rgb(248, 177, 85);
         color: rgb(255, 255, 255);
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 2rem;
         border-radius: 5px;
         font-family: 'Lucida Sans Regular';
       }
@@ -126,6 +126,8 @@
       #hero button:active {
         background-color: rgb(34, 73, 121);
       }
+
+      
 
       /* solutions section */
       main {
