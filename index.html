@@ -6,89 +6,419 @@
     <title>Dux</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./imgs/logo.png" />
-  </head>
-  <body>
-    <div id="body">
-      <!-- header -->
-       <div id="bg">
-      <header id="nav-bar">
-        <a href="#">
-          <img src="./imgs/logo.png" alt="dux logo" />
-        </a>
-        <nav>
-          <ul>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact us</a></li>
-          </ul>
-        </nav>
-      </header>
+    <style>
+      html,
+      body {
+        min-height: 100%;
+      }
 
-      <main>
-        <section id="hero">
-          <div id="text-img">
-            <div id="text">
-              <h1>
-                <span id="dux">Dux</span> <br />
-                Business Solutions
-              </h1>
-              <p>
-                We have a deep understanding of the unique needs and challenges
-                faced by these companies and are committed to helping them
-                succeed. Dux Software offers a flexible and cost-effective
-                approach to provide custom software solutions without breaking
-                the bank. Their team of experts can help businesses take their
-                operations to the next level with reliable and affordable
-                software development services
-              </p>
-            </div>
-            <img src="./imgs/laptop dashboard.png" alt="laptop dashboard" />
+      body {
+        background: linear-gradient(
+          360deg,
+          rgb(241, 247, 252) 65%,
+          rgb(205, 228, 253)
+        );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      #nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15%;
+        border-bottom: 1px solid rgb(5, 34, 68);
+        margin-bottom: 8%;
+      }
+
+      #nav-bar img {
+        width: auto;
+        height: 60px;
+        flex-shrink: 0;
+      }
+
+      #nav-bar ul {
+        list-style-type: none;
+        display: flex;
+        gap: 4px;
+      }
+
+      #nav-bar ul a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 8px 16px;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0) 95%,
+          rgb(11, 150, 243)
+        );
+      }
+
+      #nav-bar ul a:hover {
+        background-color: rgba(11, 150, 243, 0.74);
+        border-radius: 5px;
+        color: white;
+      }
+
+      main {
+        padding: 0 15%;
+      }
+
+      #hero {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 10%;
+      }
+
+      #hero #text-img {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      #hero #text {
+        width: 50%;
+      }
+
+      #hero img {
+        width: 50%;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+
+      #hero h1 {
+        font-size: 4rem;
+        line-height: 0.85;
+        margin-bottom: 24px;
+      }
+
+      #hero span {
+        color: rgb(11, 150, 243);
+        font-size: 5rem;
+      }
+
+      #hero p {
+        font-size: 1.5rem;
+      }
+
+      #hero button {
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+        background: linear-gradient(#ff7300, #c25700);
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      #hero button:hover {
+        background: linear-gradient(#c25700, #ff7300);
+        cursor: pointer;
+      }
+
+      #solutions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        margin-bottom: 44px;
+      }
+
+      #solutions h2 {
+        font-size: 2.5rem;
+        margin-bottom: 18px;
+      }
+
+      #solutions h2 span {
+        color: #e06500;
+      }
+
+      #solutions #figs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: start;
+        border-radius: 5px;
+        box-sizing: content-box;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+
+      #solutions figure {
+        width: 23%;
+        height: auto;
+      }
+
+      #solutions img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      #quote {
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 30px 20%;
+        font-size: 2rem;
+      }
+
+      #quote p {
+        text-align: right;
+      }
+
+      #contact-us {
+        margin-top: 200px;
+        background-color: rgb(11, 150, 243);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        border-radius: 5px;
+      }
+
+      #contact-us p,
+      #contact-us h3 {
+        color: white;
+      }
+
+      #contact-us button {
+        background-color: rgb(11, 150, 243);
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 8px 16px;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      #contact-us button:hover {
+        background-color: rgb(10, 125, 201);
+        cursor: pointer;
+      }
+
+      footer {
+        padding: 8px 0;
+        margin-top: 24px;
+        background-color: rgb(5, 34, 68);
+      }
+
+      footer p {
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+
+      @media (max-width:1100px) {
+        #nav-bar {
+          padding: 0 10%;
+        }
+        
+        #nav-bar ul a {
+          font-size: 1.1rem;
+        }
+
+        main {
+          padding: 0 10%;
+        } 
+
+        #hero #text-img {
+          /* flex-direction: column; */
+          align-items: center;
+        }
+
+        #hero h1 {
+          font-size: 3rem;
+          line-height: 0.9;
+          margin-bottom: 12px;
+        }
+
+        #hero #text {
+          margin-bottom: 22px;
+        }
+
+        #hero h1 span {
+          font-size: 4.5rem;
+        }
+
+
+        #hero p {
+          font-size: 1.2rem;
+        }
+
+        #hero button {
+          font-size: 2.5rem;
+        }
+
+        #solutions #figs {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        #solutions figure {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          height: auto;
+          background-color: rgba(11, 150, 243, 0.075);
+          border-radius: 5px;
+        }
+
+        #solutions figure figcaption {
+          width: auto;
+          font-size: 1.3rem;
+          margin: 0;
+          padding: 0 20px;
+        }
+
+        #solutions figure:nth-of-type(even) {
+          flex-direction: row-reverse;
+        }
+
+        #solutions figure img {
+          width: 40%;
+          margin: 0;
+          padding: 0;
+          border-radius: 5px;
+        }
+
+        @media screen and (max-width: 980px) {
+          #nav-bar ul a {
+            font-size: .8rem;
+          }
+          #hero #text-img {
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+          }
+
+          #hero #text {
+            width: 100%;
+            margin: 0;
+          }
+
+          #hero h1 {
+            font-size: 5rem;
+          }
+
+          #hero #dux {
+            font-size: 7rem;
+          }
+
+          #hero img {
+            width: 80%;
+          }
+
+          #hero button {
+            font-size: 3rem;
+            padding: 8px 16px;
+            margin-top: 36px;
+          }
+          @media screen and (max-width: 768px) {
+            #solutions figure figcaption {
+              font-size: 1rem;
+              margin: 20px 0;
+            }
+
+            #solutions figure img {
+              width: 40%;
+            }
+
+            #contact-us {
+              margin-top: 250px;
+            }
+
+            #contact-us button {
+              font-size: 1rem;
+              width: 50%;
+              height: 20%;
+            }
+
+            
+          }
+          @media screen and (max-width: 420px) {
+            #contact-us {
+              margin-top: 300px;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="nav-bar">
+      <a href="#">
+        <img src="./imgs/logo.png" alt="dux logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div id="text-img">
+          <div id="text">
+            <h1>
+              <span id="dux">Dux</span> <br />
+              Business Solutions
+            </h1>
+            <p>
+              We have a deep understanding of the unique needs and challenges
+              faced by these companies and are committed to helping them
+              succeed. Dux Software offers a flexible and cost-effective
+              approach to provide custom software solutions without breaking the
+              bank. Their team of experts can help businesses take their
+              operations to the next level with reliable and affordable software
+              development services
+            </p>
           </div>
-          <button id="hero-btn" value="Sign up">Sign up</button>
-        </section>
-      </div>
+          <img src="./imgs/laptop dashboard.png" alt="laptop dashboard" />
+        </div>
+        <button id="hero-btn" value="Sign up">Sign up</button>
+      </section>
+
+      <section id="solutions">
         <h2 id="solutions-title"><span>|</span>Solutions</h2>
-        <section id="solutions">
+        <div id="figs">
           <figure class="solutions-img">
             <img src="./imgs/grow.jpg" alt="vision image" class="sol-img" />
             <figcaption>
-              Envisioning the future of your business is essential for strategic
-              growth. Begin by defining your company's purpose and aspirations
-              to guide your vision. Analyze key trends and forces in your
-              industry, such as technology and customer preferences. Engage your
-              leadership team to challenge assumptions and explore
-              opportunities. This vision should inform your strategic
-              priorities, ensuring your organization remains relevant and
-              resilient. Regularly revisiting and refining your vision will help
-              keep your business innovative and adaptable.
+              <span>E</span>nvisioning the future of your business is essential
+              for strategic growth. Begin by defining your company's purpose and
+              aspirations to guide your vision. Analyze key trends and forces in
+              your industry, such as technology and customer preferences.
             </figcaption>
           </figure>
           <figure class="solutions-img">
             <img src="./imgs/idea.jpg" alt="idea image" class="sol-img" />
             <figcaption>
-              Innovative ideas possess the remarkable power to transform
-              challenges into valuable opportunities for growth and success. By
-              embracing creativity and thinking outside the box, businesses can
-              effectively navigate obstacles and turn them into stepping stones
-              for progress. These forward-thinking solutions not only address
-              immediate issues but also pave the way for long-term advancement.
-              Cultivating a culture of innovation empowers organizations to
-              adapt, thrive, and achieve their goals in an ever-evolving
-              landscape, ensuring sustained relevance and competitiveness.
+              <span>I</span>nnovative ideas possess the remarkable power to
+              transform challenges into valuable opportunities for growth and
+              success. By embracing creativity and thinking outside the box,
+              businesses can effectively navigate obstacles and turn them into
+              stepping stones for progress.
             </figcaption>
           </figure>
           <figure class="solutions-img">
             <img src="./imgs/chess.jpeg" alt="chess image" class="sol-img" />
             <figcaption>
-              Empowering your business involves providing effective solutions
-              that enable you to overcome challenges and achieve lasting
-              success. By identifying and implementing tailored strategies,
-              organizations can address obstacles head-on and turn them into
-              opportunities for growth. This proactive approach not only
-              enhances operational efficiency but also fosters a culture of
-              resilience and adaptability. Ultimately, equipping your business
-              with the right tools and insights positions you for sustained
-              achievement in a competitive landscape.
+              <span>E</span>mpowering your business involves providing effective
+              solutions that enable you to overcome challenges and achieve
+              lasting success. By identifying and implementing tailored
+              strategies, organizations can address obstacles head-on and turn
+              them into opportunities for growth.
             </figcaption>
           </figure>
           <figure class="solutions-img">
@@ -98,39 +428,36 @@
               class="sol-img"
             />
             <figcaption>
-              Together, we harness our collective strengths to create innovative
-              solutions that drive success through collaboration. By fostering a
-              culture of teamwork and open communication, we can share diverse
-              perspectives and ideas, leading to more effective problem-solving.
-              This collaborative approach not only enhances creativity but also
-              builds trust and unity among team members. Ultimately, our joint
-              efforts empower us to achieve remarkable results and navigate
-              challenges more effectively.
+              <span>T</span>ogether, we harness our collective strengths to
+              create innovative solutions that drive success through
+              collaboration. By fostering a culture of teamwork and open
+              communication, we can share diverse perspectives and ideas,
+              leading to more effective problem-solving.
             </figcaption>
           </figure>
-        </section>
+        </div>
+      </section>
 
-        <section id="quote">
-          <blockquote>
-            The best way to predict the future is to invent it.
-            <p id="alan-kay">- Alan Kay</p>
-          </blockquote>
-        </section>
+      <section id="quote">
+        <blockquote>
+          <em>The best way to predict the future is to invent it.</em>
+          <p id="alan-kay">- Alan Kay</p>
+        </blockquote>
+      </section>
 
-        <section id="contact-us">
-          <div>
-            <h3>Call us now! It's time!</h3>
-            <p>
-              Sign up for our product by clicking that button right over there!
-            </p>
-          </div>
-          <button id="contact-us-btn">Contact us</button>
-        </section>
-      </main>
-      
-      <footer>
-        <p>Copyright &copy; Dux Innovations 2024</p>
-      </footer>
-    </div>
+      <section id="contact-us">
+        <div>
+          <h3>Call us now! It's time!</h3>
+          <p>
+            Sign up for our product by clicking that button right over there!
+          </p>
+        </div>
+        <button id="contact-us-btn">Contact us</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; Dux Innovations 2024</p>
+    </footer>
   </body>
 </html>
